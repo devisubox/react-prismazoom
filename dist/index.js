@@ -558,7 +558,7 @@ var PrismaZoom = /*#__PURE__*/function (_PureComponent) {
     _this.lastRequestAnimationId = null; // Determines if the device has a mouse
 
     _this.hasMouseDevice = window.matchMedia('(pointer: fine)').matches;
-    _this.state = _objectSpread(_objectSpread({}, _this.constructor.defaultState), {}, {
+    _this.state = _objectSpread(_objectSpread(_objectSpread({}, _this.constructor.defaultState), props.initialState), {}, {
       transitionDuration: props.animDuration
     });
     return _this;
@@ -686,7 +686,17 @@ exports.default = PrismaZoom;
   decelerationDuration: _propTypes.default.number,
   allowZoom: _propTypes.default.bool,
   allowPan: _propTypes.default.bool,
-  allowTouchEvents: _propTypes.default.bool
+  allowTouchEvents: _propTypes.default.bool,
+  initialState: _propTypes.default.shape({
+    // Transform scale value property
+    zoom: _propTypes.default.number,
+    // Transform translateX value property
+    posX: _propTypes.default.number,
+    // Transform translateY value property
+    posY: _propTypes.default.number,
+    // Cursor style property
+    cursor: _propTypes.default.oneOf(['auto', 'pointer', 'wait', 'crosshair', 'not-allowed', 'zoom-in', 'grab'])
+  })
 });
 (0, _defineProperty2.default)(PrismaZoom, "defaultProps", {
   // Class name to apply on the zoom wrapper
