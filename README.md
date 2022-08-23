@@ -91,21 +91,23 @@ import PrismaZoom from 'react-prismazoom'
 
 ### Props
 
-| Name | Type | Default | Description |
-| --- | --- | --- |  --- |
-| className | string | None | Class name to apply on the zoom wrapper. |
+| Name | Type | Default | Description                                                                                                                                                                            |
+| --- | --- | --- |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| className | string | None | Class name to apply on the zoom wrapper.                                                                                                                                               |
 | style | object | None | Style to apply on the zoom wrapper. Note that *transform*, *transition*, *cursor*, *touch-action* and *will-change* cannot be overridden. Example: `style={{backgroundColor: 'red'}}`. |
-| minZoom | number | 1 | Minimum zoom ratio. |
-| maxZoom | number | 5 | Maximum zoom ratio. |
-| scrollVelocity | number | 0.1 | Zoom increment or decrement on each scroll wheel detection. |
-| onZoomChange | function | null | Function called each time the zoom value changes. |
-| onPanChange | function | null | Function called each time the posX or posY value changes (aka images was panned). |
-| animDuration | number | 0.25 | Animation duration (in seconds). |
-| doubleTouchMaxDelay | number | 300 | Max delay between two taps to consider a double tap (in milliseconds). |
-| decelerationDuration | number | 750 | Decelerating movement duration after a mouse up or a touch end event (in milliseconds). |
-| allowZoom | boolean | true | Enable or disable zooming in place.
-| allowPan | boolean | true | Enable or disable panning in place.
-| allowTouchEvents | boolean | false | Enables touch event propagation. |
+| minZoom | number | 1 | Minimum zoom ratio.                                                                                                                                                                    |
+| maxZoom | number | 5 | Maximum zoom ratio.                                                                                                                                                                    |
+| scrollVelocity | number | 0.1 | Zoom increment or decrement on each scroll wheel detection.                                                                                                                            |
+| onZoomChange | function | null | Function called each time the zoom value changes.                                                                                                                                      |
+| onPanChange | function | null | Function called each time the posX or posY value changes (aka images was panned).                                                                                                      |
+| animDuration | number | 0.25 | Animation duration (in seconds).                                                                                                                                                       |
+| doubleTouchMaxDelay | number | 300 | Max delay between two taps to consider a double tap (in milliseconds).                                                                                                                 |
+| decelerationDuration | number | 750 | Decelerating movement duration after a mouse up or a touch end event (in milliseconds).                                                                                                |
+| allowZoom | boolean | true | Enable or disable zooming in place.                                                                                                                                                    
+| allowPan | boolean | true | Enable or disable panning in place.                                                                                                                                                    
+| allowTouchEvents | boolean | false | Enables touch event propagation.                                                                                                                                                       
+| initialState | object | `{zoom: 1, posX: 0, posY: 0, cursor: 'auto'}` | Allows to give a zoom level and a pan used on mount (following a previous memorization of this state thanks to callbacks for example).                                                 |
+|
 
 **Note:** all props are optional.
 

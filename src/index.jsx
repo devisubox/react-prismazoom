@@ -17,6 +17,16 @@ export default class PrismaZoom extends PureComponent {
     allowZoom: PropTypes.bool,
     allowPan: PropTypes.bool,
     allowTouchEvents: PropTypes.bool,
+    initialState: PropTypes.shape({
+      // Transform scale value property
+      zoom: PropTypes.number,
+      // Transform translateX value property
+      posX: PropTypes.number,
+      // Transform translateY value property
+      posY: PropTypes.number,
+      // Cursor style property
+      cursor: PropTypes.oneOf(['auto', 'pointer', 'wait', 'crosshair', 'not-allowed', 'zoom-in', 'grab']),
+    }),
   }
 
   static defaultProps = {
@@ -80,6 +90,7 @@ export default class PrismaZoom extends PureComponent {
 
     this.state = {
       ...this.constructor.defaultState,
+      ...props.initialState,
       transitionDuration: props.animDuration,
     }
   }
